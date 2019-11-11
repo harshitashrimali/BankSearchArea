@@ -1,0 +1,18 @@
+<div class="page">
+  <div class="header">
+    <strong>
+      Favourite Banks
+    </strong>
+  </div>
+  <div class="mat-elevation-z8">
+    <div class="loader" *ngIf="dataSource.data.length == 0">
+      <div style="font-size: 1.2rem">There is no favourite bank available</div>
+    </div>
+    <div *ngIf="dataSource.data.length > 0">
+      <app-bank [columns]="columns" [dataSource]="dataSource"></app-bank>
+    </div>
+  </div>
+</div>
+<div class="bottom">
+  <button mat-stroked-button color="primary" (click)="goToHome()">Back to Home</button>
+</div>

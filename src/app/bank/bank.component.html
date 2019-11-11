@@ -1,0 +1,39 @@
+<div>
+  <table mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="bank_name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let elements" (click)="viewBank(elements.ifsc)"> {{elements.bank_name}} </td>
+    </ng-container>
+    <ng-container matColumnDef="branch">
+      <th mat-header-cell *matHeaderCellDef> Branch </th>
+      <td mat-cell *matCellDef="let elements" (click)="viewBank(elements.ifsc)"> {{elements.branch}} </td>
+    </ng-container>
+    <ng-container matColumnDef="city">
+      <th mat-header-cell *matHeaderCellDef> City </th>
+      <td mat-cell *matCellDef="let elements" (click)="viewBank(elements.ifsc)"> {{elements.city}} </td>
+    </ng-container>
+    <ng-container matColumnDef="district">
+      <th mat-header-cell *matHeaderCellDef> District </th>
+      <td mat-cell *matCellDef="let elements" (click)="viewBank(elements.ifsc)"> {{elements.district}} </td>
+    </ng-container>
+    <ng-container matColumnDef="ifsc">
+      <th mat-header-cell *matHeaderCellDef> IFSC Code </th>
+      <td mat-cell *matCellDef="let elements" (click)="viewBank(elements.ifsc)"> {{elements.ifsc}} </td>
+    </ng-container>
+    <ng-container matColumnDef="state">
+      <th mat-header-cell *matHeaderCellDef> State </th>
+      <td mat-cell *matCellDef="let elements" (click)="viewBank(elements.ifsc)"> {{elements.state}} </td>
+    </ng-container>
+    <ng-container matColumnDef="favourite">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let elements">
+        <img class="pointer" src="assets/like.svg" *ngIf="getFavourite(elements)" (click)="setFavourite(false,elements)">
+        <img class="pointer" src="assets/heart.svg" *ngIf="!getFavourite(elements)" (click)="setFavourite(true,elements)">
+      </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="columns"></tr>
+    <tr mat-row class="pointer" *matRowDef="let row; columns: columns;"></tr>
+  </table>
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons>
+  </mat-paginator>
+</div>

@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+.pointer {
+    cursor: pointer;
+}
+
+.mat-cell {
+    font-size: 12px;
+}
+
+table {
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    background-color: #f2f2f2
+}
+
+.page {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    padding: 10%;
+}
+
+
+.mat-stroked-button{
+    border-color: #3f51b5 !important;
+}
+
+.bottom{
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 50%;
+    
+}
+
