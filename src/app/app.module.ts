@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatTableModule, MatButtonModule, MatIconModule, MatCardModule, MatSelectModule, MatProgressSpinnerModule, MatGridListModule, MatInputModule, MatPaginatorModule} from '@angular/material';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { APP_BASE_HREF } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     MatSelectModule 
    ],
-  providers: [],
+  providers: [ {provide: APP_BASE_HREF, useValue: '/my/app'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
