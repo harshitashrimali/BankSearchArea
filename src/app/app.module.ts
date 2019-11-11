@@ -38,7 +38,7 @@ import { APP_BASE_HREF } from '@angular/common';
     HttpClientModule,
     MatSelectModule 
    ],
-  providers: [ {provide: APP_BASE_HREF, useValue: '/my/app'}],
+  providers: [ {provide: APP_BASE_HREF, useValue: '/'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
